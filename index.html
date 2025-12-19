@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ayushi HTML CSS Practical</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: #f2f4f8;
+            font-family: Arial, sans-serif;
+        }
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        img {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= INTRODUCTION ================= -->
+<div class="container text-center my-4">
+    <h1 class="text-primary">HTML CSS Practical</h1>
+    <p>HTML • CSS • Bootstrap</p>
+</div>
+
+<!-- ================= IMAGES (ONLINE SOURCES) ================= -->
+<div class="container box">
+    <h3>HTML Images (Online)</h3>
+
+    <!-- Normal Image -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+         alt="HTML Logo" width="120">
+
+    <!-- Image with size -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+         alt="CSS Logo" width="100">
+
+    <!-- Image as Link -->
+    <a href="https://www.w3schools.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/W3Schools_logo.svg"
+             alt="W3Schools" width="120">
+    </a>
+
+    <!-- Bootstrap Styled Image -->
+    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png"
+         alt="Bootstrap Logo" width="120" class="rounded-circle">
+</div>
+
+<!-- ================= LISTS ================= -->
+<div class="container box">
+    <h3>HTML Lists</h3>
+
+    <h5>Ordered List</h5>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
+    </ol>
+
+    <h5>Unordered List</h5>
+    <ul>
+        <li>Chrome</li>
+        <li>Firefox</li>
+        <li>Edge</li>
+    </ul>
+
+    <h5>Description List</h5>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Structure of Webpage</dd>
+        <dt>CSS</dt>
+        <dd>Design and Styling</dd>
+    </dl>
+</div>
+
+<!-- ================= TABLE ================= -->
+<div class="container box">
+    <h3>HTML Table</h3>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Topic</th>
+                <th>Reference</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>HTML</td>
+                <td>w3schools.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>CSS</td>
+                <td>w3schools.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Bootstrap</td>
+                <td>getbootstrap.com</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ================= FORM (ALL ELEMENTS) ================= -->
+<div class="container box">
+    <h3>HTML Form (All Elements)</h3>
+
+    <div id="successMsg" class="alert alert-success d-none">
+        Form Submitted Successfully!
+    </div>
+
+    <form>
+
+        <label>Full Name</label>
+        <input type="text" class="form-control" placeholder="Enter name" required>
+
+        <label class="mt-2">Email</label>
+        <input type="email" class="form-control">
+
+        <label class="mt-2">Password</label>
+        <input type="password" class="form-control">
+
+        <label class="mt-2">Age</label>
+        <input type="number" class="form-control">
+
+        <label class="mt-2">Date of Birth</label>
+        <input type="date" class="form-control">
+
+        <label class="mt-2">Gender</label><br>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+
+        <div class="mt-2">
+            <input type="checkbox"> Accept Terms & Conditions
+        </div>
+
+        <label class="mt-2">Course</label>
+        <select class="form-control">
+            <option>B.Tech</option>
+            <option>M.Tech</option>
+            <option>MCA</option>
+        </select>
+
+        <label class="mt-2">Address</label>
+        <textarea class="form-control"></textarea>
+
+        <label class="mt-2">Upload File</label>
+        <input type="file" class="form-control">
+
+        <label class="mt-2">Skill Level</label>
+        <input type="range" class="form-control">
+
+        <label class="mt-2">Favorite Color</label>
+        <input type="color" class="form-control">
+
+        <input type="hidden" value="student">
+
+        <!-- Custom Attribute + Event -->
+        <button type="button"
+                class="btn btn-primary mt-3"
+                data-user="student"
+                onclick="submitForm(this)">
+            Submit
+        </button>
+
+        <input type="reset" class="btn btn-secondary mt-3">
+
+    </form>
+</div>
+
+<!-- ================= JAVASCRIPT EVENTS ================= -->
+<script>
+    function submitForm(btn) {
+        alert("User Type: " + btn.getAttribute("data-user"));
+        document.getElementById("successMsg").classList.remove("d-none");
+    }
+</script>
+
+<!-- ================= FOOTER ================= -->
+<div class="container text-center mb-4">
+    <p>© 2025 Ayushi Practice</p>
+</div>
+
+</body>
+</html>
